@@ -19,7 +19,7 @@ let fatarrow = () => {
 }
 fatarrow();
 
-HIGHER ORDER FUNCTION
+//HIGHER ORDER FUNCTION
 function fun1() {
     console.log("i am a higher order function");
 }
