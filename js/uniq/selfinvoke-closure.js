@@ -19,7 +19,7 @@
 
 // })()
 
-(function (username, age) {
-    console.log("self invoked statements", username + age);
+// (function (username, age) {
+//     console.log("self invoked statements", username + age);
 
-})(" Navin ", 20);
+// })(" Navin ", 20);

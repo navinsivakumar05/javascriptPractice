@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Toss</title>
+
+    <style>
+        .design {
+            size: 50cm;
+            background-color: blueviolet;
+            color: white;
+            border-color: brown;
+            border-radius: 6px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <button onclick="
+        let computervalue ='';
+        const randomvalue = Math.random()
+        if(randomvalue >=0 && randomvalue < 1/2)
+         alert('Toss won') ; 
+       
+        else if(randomvalue >1/2 && randomvalue <1)
+       alert('Toss lose');
+        " class="design">
+        HEAD </button>
+
+    <button onclick="
+        let computervalue ='';
+        const randomvalue = Math.random()
+        if(randomvalue >=0 && randomvalue < 1/2)
+         alert('You lose') ; 
+       
+        else if(randomvalue >1/2 && randomvalue <1)
+       alert('you win');" class="design">
+        TAIL
+    </button>
+
+    <script></script>
+</body>
+
+</html>

@@ -1,3 +1,12 @@
+//RULES FOR VARIABLE DECLARATION
+
+//1. Names must begin with letters.
+//2. Names can also begin with $ or _.
+//3. Variables are case sensitive .
+//4. Reserved words cannot be used.
+
+
+
 // //SCOPE OF VARIABLES
 
 // // VAR - FUNCTION SCOPE
@@ -10,7 +19,7 @@
 
 // }
 // outerfunction();
-// by using the var keyword we can acces the value within its function block .
+// //by using the var keyword we can acces the value within its function block .
 
 
 // function blockscoped() {
@@ -79,4 +88,12 @@
 // globalvaraccess();
 // console.log(a + b + c);
 
-// // this above is known as scope chaining.
+// this above is known as scope chaining.
+
+//1. Camel case
+//2. Pascal case
+//3. Under case
+
+// let newEmpId = 123; //camel case
+// let NewEmpId = 233;  //pascal case
+// let new_emp_id = 234; //under case

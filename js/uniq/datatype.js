@@ -23,3 +23,44 @@
 // var time = new Date();
 // console.log(time);
 // console.log(typeof time);
+
+//PRIMITIVE DATATYPE
+
+//NUMBER
+
+var num = 120;
+var num = 1.25;
+console.log(num);
+
+//String 
+let username = "Navin is learing javascript";
+username = 'javascript is a single threaded Language';  //it is reinitialization.
+
+
+console.log(username);
+
+//BOOLEAN
+
+let condition = true;
+condition = false;
+console.log(num, username, condition);
+
+//UNDEFINED
+
+let novalue;
+console.log(novalue);
+
+//NULL
+
+let emptyvalue = null;
+console.log(null);
+
+//SINGLE LINE COMMENT
+/*
+MULTILINE COMMENT
+IS PUT IN HERE
+*/
+
+//NON PRIMITIE DATATYPE
+
+// ARRAY
