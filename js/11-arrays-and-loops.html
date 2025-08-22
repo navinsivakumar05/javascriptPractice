@@ -102,6 +102,61 @@
         // }
         // console.log(arr2);
 
+        /* here the array1 store the reference of the [1,2,3],
+        so when we assign array1 to array2 the reference of array1
+        will be passed here both the array1 and array2 are pointing 
+        the same element int the computer memory.*/
+
+
+        // const array1 = [1, 2, 3];  
+        // const array2 = array1;
+        // array2.push(4);
+        // console.log(array1);
+        // console.log(array2);
+
+        const array1 = [1, 2, 3];
+        const array2 = array1.slice();
+        array2.push(4);
+        console.log(array1);
+        console.log(array2);
+        /*.slice() method helps you make a separate
+       array so changes to one don’t change the other.*/
+
+        const array3 = [1, 2, 3];
+        /* to get the first and second value
+         out of this array we use*/
+
+        const [firstvalue, secondvalue] = [1, 2, 3];
+        console.log(firstvalue);
+
+        for (let i = 0; i < 10; i++) {
+            console.log(i);
+            if (i != 8) {
+                break;  //exist the loop early
+            }
+        }
+
+
+        for (let i = 0; i < 10; i++) {
+
+            if (i == 8) {
+                continue;  //skip the particular portion of the loop by using this we can skip 1 iteration
+
+
+            }
+            console.log(i);
+        }
+
+        for (let i = 1; i < 10; i++) {
+
+            if (i % 3 == 0) {
+                continue;
+            }
+            console.log(i);
+        }
+
+
+
 
 
 

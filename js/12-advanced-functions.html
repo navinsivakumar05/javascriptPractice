@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Advanced functions</title>
+</head>
+
+<body>
+
+    <script>
+
+        // function greeting() {
+        //     console.log('hello');
+        // }
+
+        // greeting();
+
+        // const num = 2;
+        // const function1 = function greeting() {
+        //     console.log('hello2');
+        // };
+        // console.log(function1);
+        // console.log(typeof function1);
+
+        // // ****ANONYMOUS FUNCTION****
+        // /* in javascript we can store functions in variables
+        // if we want to run that function we don't need
+        // the function to be named we can call that function using
+        // its varibale name this is known as Anonymous function(function without a name).
+        // */
+        // const function2 = function () {
+        //     console.log('hello2');
+        // };
+        // console.log(function1);
+        // console.log(typeof function1);
+        // function2();
+
+
+        // //save a vallue in an object.
+        // const object = {
+        //     num: 2,
+        //     fun: function () {
+        //         console.log('hello3');
+        //     }
+        // }
+        // object.fun();
+
+        // //pass a value into a function
+        // function display(param) {
+        //     console.log(param);
+        // }
+
+        // display(2);
+
+        // //we can also pass a function inot a function.
+        // function run(param) {
+        //     param();
+
+        // }
+
+
+        // //this is a callback function.
+        // run(function () {
+        //     console.log('hello4');
+        // });
+        // /*Functions are values anything we do with
+        // value can also do with functions.*/
+
+
+        //*****ASYNCHRONOUS CODE*****//
+        /* => won't wait for a line to finish before going to the 
+        next line
+        Advantages:
+           -it doesn't block our code for 3 seconds it setup the 
+           timer in the background and then goes to the next line of code.
+        */
+
+        /* SYNCHRONOUS CODE
+            => will wait for one line to finish before going to the 
+            next line. 
+            */
+        setTimeout(function () {
+            console.log('timeout');
+            console.log('timeout2');
+        },
+            3000);
+
+        console.log('next line');
+
+
+
+
+    </script>
+
+</body>
+
+</html>
