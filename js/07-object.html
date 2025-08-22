@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>objects</title>
+</head>
+
+<body>
+    <script>
+        // const product = {
+        //     //Property: value
+        //     name: 'socks',
+        //     price: 1090
+
+        // };
+
+        // console.log(product);
+        // console.log(product.name);
+        // console.log(product.price);
+
+        // product.name = 'cotton socks';  //this is to change the existing value.
+
+
+        // console.log(product.name);
+
+        // product.newProperty = true;  //this is to add new property to the existing object.
+
+        // console.log(typeof product);
+
+        //syntax Rules for objects
+
+        // const product2 = {
+        //     name: 'shirt',
+        //     'delivery-time': '1day',
+        //     //inner object
+        //     rating: {
+        //         stars: 4.5,
+        //         count: 87
+        //     }
+
+
+
+        // };
+
+        // console.log(product2);
+        // console.log(product2.name);
+        // console.log(product2['name']);
+        // console.log(product2['delivery-time']);
+        // console.log(product2.rating.count);
+        // console.log(product2.rating.stars);
+
+        // console.log(JSON.stringify(product2));
+
+        // const jsonstring = JSON.stringify(product2)
+        // console.log(JSON.parse(jsonstring));
+
+        //PROPERTIES AND METHODS.
+        console.log('hello'.length);
+        console.log('hello'.toUpperCase());
+
+
+        //  OBJECTS ARE REFERENCES.
+
+        // here the object1 just get the refrence of the varibale message1 in the computer's memory
+        const object1 = {
+            message1: 'hi'
+        };
+        //by the refrence eventhough we have const varible reference we can change the value of the message1.
+
+
+        //javascript woks on the copy the references
+
+        //          types, meaning that variables do not hold the actual object itself, but instead hold a reference (like a pointer or address) to where the object is stored in memory. When you assign or copy an object to another variable, you are copying this reference, not the object. Thus, changes made through one reference will affect the original object and are visible through all other references.
+
+        // Example:
+
+        // javascript
+        // let a = { name: "John" };
+        // let b = a; // b now references the same object as a
+        // b.name = "Jane";
+        // console.log(a.name); // Output: "Jane" - both variables see the change
+
+        const object2 = object1;
+
+        object2.message1 = 'Good job!';
+        console.log(object1);
+
+        const objects3 =
+        {
+            message3: 'Good job!'
+        };
+
+        console.log(object2 === objects3);
+        //this code compares only the references not the values inside.
+        //because the object2 and objects3 contains different references it results in false.
+
+        console.log(object1 === object2);
+
+
+        const objects4 =
+        {
+            message3: 'Good job!',
+            price: message = 799
+        };
+
+        // //if the variable name and property name are same  
+
+        // const message = objects4.message;
+
+        //we have a shortcut that is called as destructuring.
+        const { message3, price } = objects4;
+        console.log(price);
+        //both the const variable in above does the same work
+
+        // console.log(message);
+        console.log(message3);
+
+        const object5 =
+        {
+            message3,
+            // method: function funciton1() {
+            //     console.log('method');
+            // }
+
+            //for these above function declartion this is the shortcut
+            method() {
+                console.log('method');
+            }
+        }
+        console.log(object5);
+        object5.method();
+
+
+
+    </script>
+
+</body>
+
+</html>

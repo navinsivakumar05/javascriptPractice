@@ -10,7 +10,6 @@
     <p>
         Rock Paper Scissors
     </p>
-
     <button onclick="
       playGame('rock');
     ">Rock</button>
@@ -23,7 +22,41 @@
       playGame('scissors');
     ">Scissors</button>
 
+    <button onclick=" 
+    score.wins =0;
+    score.losses = 0;
+    score.ties = 0;
+    localStorage.removeItem('score');
+
+
+    ">Reset Score
+
+    </button>
+
     <script>
+        // const score = {
+        //     wins: 0,
+        //     losses: 0,
+        //     ties: 0
+        // };
+
+        let score = JSON.parse(localStorage.getItem('score'))
+            || {
+            wins: 0,
+            losses: 0,
+            ties: 0
+        };
+
+        // if (score === null) {
+        //     score = {
+        //         wins: 0,
+        //         losses: 0,
+        //         ties: 0
+        //     };
+        // }
+
+        // console.log(localStorage.getItem('mess'));
+
         function playGame(playerMove) {
             const computerMove = pickComputerMove();
 
@@ -56,8 +89,28 @@
                     result = 'You win.';
                 }
             }
+            if (result === 'You win.') {
+                score.wins += 1;
+            }
 
-            alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}`);
+            else if (result === 'You lose.') {
+                score.losses += 1;
+            }
+
+            else if (result === 'Tie.') {
+                score.ties += 1;
+            }
+
+            //to store the value in the local storage to save the variable values if the page is refreshed.
+            localStorage.setItem('score', JSON.stringify(score));
+            // localStorage.setItem('mess', 'hello');
+
+
+
+
+
+            alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
+ wins: ${score.wins}, losses: ${score.losses}, Ties: ${score.ties} `);
         }
 
         function pickComputerMove() {
@@ -75,9 +128,6 @@
 
             return computerMove;
         }
-
-
-
     </script>
 
 </body>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>DOM</title>
+</head>
+
+<body>
+    <button>
+        hello
+    </button>
+    <button class="js-button">
+        second button
+    </button>
+
+    <script>
+
+
+
+        // console.log(document.querySelector('button'));
+        // console.log(document.querySelector('body'));
+
+        //to change the part of the page that we need to change.
+        // console.log(document.querySelector('button').innerHTML);
+
+        document.querySelector('button')
+            .innerHTML = 'hi';
+
+        const buttonElement = document.querySelector('.js-button');
+        console.log(buttonElement);
+        document.querySelector('.js-button')
+            .innerHTML = 'channged the second button';
+
+        /*
+
+        console.log(document.title);
+        document.title = 'changed';
+
+        console.log(document.body); //This is very special function
+        console.log(typeof document.body);
+        console.log(document.body.innerHTML);  //this shows the all the content in the html.
+        // document.body.innerHTML = 'changed';
+        document.body.innerHTML = '<button> good job! </button>';
+
+*/
+        /*
+        document.body.innerHTML = 'hello';
+        document.title = 'Good job!';  //change the title of the webpage
+
+        */
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Dom Projects</title>
+
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        .js-button {
+            background-color: black;
+            border: none;
+            color: white;
+            border-radius: 15px;
+            /* width: 80px;
+            height: 30px; */
+            font-size: 12px;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 30px;
+
+
+        }
+
+        .is-subscribed {
+            background-color: rgb(245, 244, 244);
+            color: black
+        }
+
+        .js-calculate {
+            background-color: green;
+            color: white;
+            border: none;
+            /* border: none;
+            this will remove the border-color of the button height: 40px; */
+            font-size: 15px;
+            padding: 12px 15px;
+
+        }
+
+        .cost-input {
+            font-size: 15px;
+            /* padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px; */
+            padding: 10px;
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <p>
+        YouTube Subscribe
+    </p>
+    <button onclick=" subscribe();
+    
+    
+    " class="js-subscribe-button js-button">
+        <!-- Subscribe     here if we add the space that will lead to error -->
+        Subscribe
+    </button>
+
+    <p>
+        Amazon Shipping Calculator
+    </p>
+    <input placeholder="Cost of order " class="cost-input js-cost-input" onkeydown="
+    handleCostkeydown()  ">
+
+    <button onclick="
+    calculateTotal()" class="js-calculate">
+        Calculate
+    </button>
+
+
+    <p class="js-total-cost">
+    </p>
+
+    <script>
+
+
+
+        function handleCostkeydown() {
+            if (event.key === 'Enter') {
+                calculateTotal();
+            }
+
+        }
+
+        function calculateTotal() {
+            const inputElement = document.querySelector('.js-cost-input');
+            let cost = Number(inputElement.value);
+            // if (inputElement.value === null) {
+            //     cost = 10;
+            // }
+
+
+            if (cost < 40) {
+                cost = cost + 10;
+            }
+            if (cost === 10) {
+                cost = 0;
+            }
+            document.querySelector('.js-total-cost')
+                .innerHTML = `$${cost}`;
+
+
+
+        }
+        function subscribe() {
+            const buttonElement = document.querySelector('.js-subscribe-button')
+
+            if (buttonElement.innerText === 'Subscribe') {
+                buttonElement.innerText = 'Subscribed';
+                buttonElement.classList.add('is-subscribed');   //by using the classList object we can create new class by using add() method
+            }
+            else {
+                buttonElement.innerText = 'Subscribe';
+            }
+
+
+        }
+
+    </script>
+
+</body>
+
+</html>

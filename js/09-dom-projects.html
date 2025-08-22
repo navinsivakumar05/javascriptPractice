@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Dom Projects</title>
+</head>
+
+<body>
+
+    <p>
+        YouTube Subscribe
+    </p>
+    <button onclick=" subscribe();
+
+    
+    
+    // const buttonElement = document.querySelector('.js-subscribe-button')
+    
+    // if(buttonElement.innerHTML==='Subscribe')
+    // {
+    //     buttonElement.innerHTML = 'Subscribed';
+    // }
+    // else{
+    //     buttonElement.innerHTML = 'Subscribe';
+    // }
+
+    //The innerText is used to get the string in the html by ignoring the extra spaces 
+    //this thing is not possible with the innerHTML.
+
+    //  if(buttonElement.innerText==='Subscribe')
+    // {
+    //     buttonElement.innerText = 'Subscribed';
+    // }
+    // else{
+    //     buttonElement.innerText = 'Subscribe';
+    // }
+    
+    
+    " class="js-subscribe-button">
+        <!-- Subscribe     here if we add the space that will lead to error -->
+        Subscribe
+    </button>
+
+    <p>
+        Amazon Shipping Calculator
+    </p>
+    <input placeholder="Cost of order" class="js-cost-input" onkeydown="
+    handleCostkeydown()  ">
+
+    <button onclick="
+    calculateTotal()">
+        Calculate
+    </button>
+
+
+    <p class="js-total-cost">
+    </p>
+
+    <script>
+        window.document //is same as teh document.something
+        window.console.log('window');
+        window.alert('hi');
+
+
+        function handleCostkeydown() {
+            if (event.key === 'Enter') {
+                calculateTotal();
+            }
+
+        }
+
+        function calculateTotal() {
+            const inputElement = document.querySelector('.js-cost-input');
+            let cost = Number(inputElement.value);
+
+
+            if (cost < 40) {
+                cost += 10;
+            }
+            document.querySelector('.js-total-cost')
+                .innerHTML = `$${cost}`;
+
+
+
+        }
+        function subscribe() {
+            const buttonElement = document.querySelector('.js-subscribe-button')
+
+            if (buttonElement.innerText === 'Subscribe') {
+                buttonElement.innerText = 'Subscribed';
+            }
+            else {
+                buttonElement.innerText = 'Subscribe';
+            }
+
+
+        }
+
+    </script>
+
+</body>
+
+</html>

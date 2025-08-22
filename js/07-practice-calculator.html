@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LocalStorage Calculator</title>
+    <style>
+        /* Basic styling for the calculator */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .calculator-display {
+            font-size: 24px;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            min-height: 30px;
+        }
+
+        button {
+            width: 50px;
+            height: 50px;
+            font-size: 18px;
+            margin: 2px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Calculator with localStorage</h1>
+
+    <p class="js-calculation calculator-display"></p>
+
+    <p>
+        <button onclick="updateCalculation('1');">1</button>
+        <button onclick="updateCalculation('2');">2</button>
+        <button onclick="updateCalculation('3');">3</button>
+        <button onclick="updateCalculation(' + ');">+</button>
+    </p>
+    <p>
+        <button onclick="updateCalculation('4');">4</button>
+        <button onclick="updateCalculation('5');">5</button>
+        <button onclick="updateCalculation('6');">6</button>
+        <button onclick="updateCalculation(' - ');">-</button>
+    </p>
+    <p>
+        <button onclick="updateCalculation('7');">7</button>
+        <button onclick="updateCalculation('8');">8</button>
+        <button onclick="updateCalculation('9');">9</button>
+        <button onclick="updateCalculation(' * ');">*</button>
+    </p>
+    <p>
+        <button onclick="updateCalculation('0');">0</button>
+        <button onclick="updateCalculation('.');">.</button>
+        <button onclick="
+      // Use eval() to compute the result and update the calculation.
+      calculation = eval(calculation);
+      displayCalculation();
+      saveCalculation();
+    ">=</button>
+        <button onclick="updateCalculation(' / ');">/</button>
+    </p>
+    <p>
+        <button onclick="
+      calculation = '';
+      displayCalculation();
+      saveCalculation();
+    ">Clear</button>
+    </p>
+
+    <script>
+        let calculation = localStorage.getItem('calculation') || '';
+
+        // Call this function once when the page first loads to show the saved calculation.
+        displayCalculation();
+
+        function updateCalculation(character) {
+            calculation += character;
+            displayCalculation();
+            saveCalculation();
+        }
+
+        // A separate function to save the calculation to localStorage.
+        function saveCalculation() {
+            // localStorage.setItem() saves data with a key ('calculation') and a value.
+            localStorage.setItem('calculation', calculation);
+        }
+
+        // A separate function to display the calculation on the page.
+        function displayCalculation() {
+            document.querySelector('.js-calculation').innerHTML = calculation;
+        }
+    </script>
+</body>
+
+</html>

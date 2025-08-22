@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Heads or Tails</title>
+</head>
+
+<body>
+
+    <button onclick="displayChoice('heads')">heads</button>
+    <button onclick="displayChoice('tails')">tails</button>
+    <p class="js-result-paragraph"></p>
+
+    <script>
+        const resultParagraph = document.querySelector('.js-result-paragraph');
+
+        // A single function to handle any choice
+        function displayChoice(choice) {
+            resultParagraph.innerHTML = `You chose: ${choice}`;
+        }
+    </script>
+
+</body>
+
+</html>

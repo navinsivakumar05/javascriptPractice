@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>08-object-practice</title>
+</head>
+
+<body>
+    <script>
+        function isSameProduct(product1, product2) {
+            // Check if both the 'name' and 'price' properties are identical.
+            return product1.name === product2.name && product1.price === product2.price;
+        }
+
+        // Create product objects to test the function.
+        const productA = {
+            name: 'shoes',
+            price: 1500
+        };
+
+        const productB = {
+            name: 'socks',
+            price: 250
+        };
+
+        const productC = {
+            name: 'shoes',
+            price: 1500
+        };
+
+        // --- Test Cases ---
+
+        // Test 1: Comparing two different products.
+        console.log(isSameProduct(productA, productB));
+        // Expected output: false
+
+        // Test 2: Comparing two products with the same values.
+        console.log(isSameProduct(productA, productC));
+        // Expected output: true
+    </script>
+    <script>
+        // Start with a mixed-case string
+        const greeting = 'Good Morning';
+
+        // Convert the string to lowercase
+        const lowerCaseGreeting = greeting.toLowerCase();
+
+        // Print the result to the console
+        console.log(lowerCaseGreeting);
+    </script>
+</body>
+
+</html>
